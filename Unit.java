@@ -15,12 +15,11 @@ public enum Unit {
 	
 	public static Unit convertFromString(String value) {
 		Unit data = null;
-		System.out.println("Unit before try/catch is " + data);
 		try {
 			 data = Unit.valueOf(value.toUpperCase());
 			 System.out.println("Unit into try is " + data);
 		} catch(Exception e) {
-			System.out.println("Exception catched on Unit enum, check followed message : " + e.getMessage());
+			System.out.println("Exception catched on "+ Unit.class + " Unit enum, check followed message : " + e.getMessage());
 		}
 		return data;
 	}
